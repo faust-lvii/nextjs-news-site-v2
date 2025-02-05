@@ -72,7 +72,7 @@ export default function NewsList() {
                 <div className="flex items-start justify-between">
                   <div>
                     <h2 className="text-lg font-semibold text-white mb-1">
-                      OpenAI'dan Yeni Yapay Zeka Modeli
+                      OpenAI&apos;dan Yeni Yapay Zeka Modeli
                     </h2>
                     <div className="flex items-center space-x-4 text-sm text-gray-400">
                       <span>Yapay Zeka</span>

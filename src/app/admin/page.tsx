@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import AdminHeader from '@/components/AdminHeader';
 
 export default function AdminDashboard() {

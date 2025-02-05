@@ -1,13 +1,7 @@
 import Link from 'next/link';
 import AdminHeader from '@/components/AdminHeader';
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default function EditNews({ params }: PageProps) {
+export default function EditNews() {
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
       <AdminHeader title="Haber Düzenle" />
