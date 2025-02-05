@@ -52,7 +52,7 @@ export default async function Home() {
 
           {/* News Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            {news.slice(1).map((item: any) => (
+            {news.slice(1).map((item: News) => (
               <Link
                 key={item._id}
                 href={`/haber/${item._id}`}

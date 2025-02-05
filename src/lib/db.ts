@@ -6,7 +6,7 @@ interface GlobalMongoose {
 }
 
 declare global {
-  var mongoose: GlobalMongoose;
+  let mongoose: GlobalMongoose;
 }
 
 const MONGODB_URI = process.env.MONGODB_URI;

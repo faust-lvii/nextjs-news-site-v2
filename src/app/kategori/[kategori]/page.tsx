@@ -47,7 +47,7 @@ export default async function CategoryPage({ params }: PageProps) {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {news.map((item: any) => (
+            {news.map((item: News) => (
               <Link
                 key={item._id}
                 href={`/haber/${item._id}`}

@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key';
 
-export async function signToken(payload: any) {
+export async function generateToken(payload: { username: string }): Promise<string> {
   try {
     return jwt.sign(payload, JWT_SECRET, { expiresIn: '1d' });
   } catch (error) {
@@ -12,7 +12,7 @@ export async function signToken(payload: any) {
   }
 }
 
-export async function verifyToken(token: string) {
+export async function verifyToken(token: string): Promise<{ username: string }> {
   try {
     return jwt.verify(token, JWT_SECRET);
   } catch (error) {

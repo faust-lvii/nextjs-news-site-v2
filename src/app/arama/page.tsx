@@ -23,7 +23,7 @@ async function searchNews(query: string) {
 
 export default async function SearchPage({ searchParams }: PageProps) {
   const query = searchParams.q || '';
-  const results = query ? await searchNews(query) : [];
+  const results: News[] = query ? await searchNews(query) : [];
 
   return (
     <>
@@ -38,12 +38,12 @@ export default async function SearchPage({ searchParams }: PageProps) {
                 Arama Sonuçları
               </h1>
               <p className="text-gray-400">
-                "{query}" için {results.length} sonuç bulundu
+                &quot;{query}&quot; için {results.length} sonuç bulundu
               </p>
             </div>
 
             <div className="space-y-6">
-              {results.map((item: any) => (
+              {results.map((item: News) => (
                 <Link
                   key={item._id}
                   href={`/haber/${item._id}`}
